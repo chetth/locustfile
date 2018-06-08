@@ -1,0 +1,5 @@
+{
+  "target": "http://localhost",
+  "profile": ["locustfile.py"],
+  "locusts": ["WebsiteUser"]
+}

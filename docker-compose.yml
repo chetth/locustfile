@@ -1,0 +1,15 @@
+version: '2.2'
+services:
+  locust-master:
+    image: chet/locustfile
+    volumes:
+      - ./scripts:/scripts
+    ports:
+      - "8089:8089"
+
+  locust-worker:
+    image: chet/locustfile
+    command: "--master-host=locust-master"
+    scale: 1
+    volumes:
+      - ./scripts:/scripts
