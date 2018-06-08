@@ -1,5 +1,6 @@
 FROM swernst/locusts:latest
 
+COPY ./scripts /scripts
 COPY ./run.py /run.py
 
 EXPOSE 8089
